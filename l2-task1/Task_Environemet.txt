@@ -1,0 +1,6 @@
+Test Environment Deatils:
+
+OS: Windows
+HAL: hal_nxp
+Board: Lpcxpresso55s16
+Debug Probe: Lpc Link server 

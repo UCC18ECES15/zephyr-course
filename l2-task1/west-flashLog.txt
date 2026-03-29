@@ -1,0 +1,12 @@
+MINGW64 /c/_ddm/zephyr/zephyr-course/zephyr-course (main)
+$ west flash
+-- west flash: rebuilding
+ninja: no work to do.
+-- west flash: using runner linkserver
+RUNNER - gdb_port = 3333, semih port = 8888
+-- runners.linkserver: LinkServer: C:\nxp\LinkServer_25.6.131\Linkserver.exe, version v25.6.131
+INFO: Exact match for LPC55S16:LPCXpresso55S16 found
+INFO: Selected device LPC55S16:LPCXpresso55S16
+INFO: Getting available probes
+INFO: Selecting probe by index
+INFO: Selected probe #1 MRATCQIQ (LPC-LINK2 CMSIS-DAP V5.224)
