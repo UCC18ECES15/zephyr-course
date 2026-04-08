@@ -39,7 +39,7 @@ int main(void)
     #ifdef CONFIG_LED_ENABLE_DEBUGGING
         LOG_INF("LED state: %s", led_state ? "ON" : "OFF");
     #endif
-    #ifdef LED_CUSTOM_BLINK_PATTERN
+    #ifdef CONFIG_LED_CUSTOM_BLINK_PATTERN
         if (led_state) 
         {
             k_msleep(CONFIG_LED_PATTERN_ON_TIME);
