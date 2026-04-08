@@ -1,0 +1,115 @@
+# ------------------------------------------------------
+# Top-level LED Subsystem (toggle)
+# ------------------------------------------------------
+menuconfig LED_SUBSYSTEM
+    bool "Enable LED Subsystem"
+    default y
+    help
+        Master toggle for all LED-related features.
+        Disable to remove all LED configuration options.
+
+if LED_SUBSYSTEM
+
+# ------------------------------------------------------
+# Blink Speed Selection (choice)
+# ------------------------------------------------------
+choice
+    prompt "LED Blink Speed"
+    default BLINK_SPEED_1000MS
+
+config BLINK_SPEED_250MS
+    bool "250 ms"
+
+config BLINK_SPEED_500MS
+    bool "500 ms"
+
+config BLINK_SPEED_1000MS
+    bool "1 second"
+
+config BLINK_SPEED_2000MS
+    bool "2 seconds"
+
+endchoice
+
+# ------------------------------------------------------
+# Hidden int symbol to hold actual milliseconds
+# ------------------------------------------------------
+config BLINK_SLEEP_TIME_MS
+    int
+    default 250  if BLINK_SPEED_250MS
+    default 500  if BLINK_SPEED_500MS
+    default 1000 if BLINK_SPEED_1000MS
+    default 2000 if BLINK_SPEED_2000MS
+    help
+        The actual sleep time in milliseconds derived
+        from the selected blink speed.
+
+
+# ------------------------------------------------------
+# Advanced LED Settings (own menuconfig)
+# ------------------------------------------------------
+menuconfig LED_ADVANCED
+    bool "Advanced LED Settings"
+    help
+        Extra LED parameters that can be configured.
+        Disable to hide advanced settings.
+
+if LED_ADVANCED
+
+config LED_BRIGHTNESS
+    int "LED brightness (0-100)"
+    range 0 100
+    default 100
+    help
+        Brightness range: 0 (off) to 100 (max).
+
+config LED_FADE_DURATION
+    int "LED fade duration (ms)"
+    range 0 5000
+    default 500
+    help
+        Fade duration in milliseconds.
+
+# ------------------------------------------------------
+# Expert settings (visible only if LED_ADVANCED is ON)
+# ------------------------------------------------------
+menu "Expert settings"
+
+config LED_ENABLE_DEBUGGING
+    bool "Enable LED debugging"
+    default n
+    help
+        Enable debugging output for LED operations.
+
+config LED_CUSTOM_BLINK_PATTERN
+    bool "Custom blink pattern"
+    default n
+    help
+        Enable custom blink pattern configuration.
+
+if LED_CUSTOM_BLINK_PATTERN
+
+config LED_PATTERN_ON_TIME
+    int "Pattern ON time (ms)"
+    range 50 5000
+    default 200
+    help
+        Duration the LED stays ON in custom pattern.
+
+config LED_PATTERN_OFF_TIME
+    int "Pattern OFF time (ms)"
+    range 50 5000
+    default 800
+    help
+        Duration the LED stays OFF in custom pattern.
+
+endif # LED_CUSTOM_BLINK_PATTERN
+
+endmenu  # Expert settings
+
+endif  # LED_ADVANCED
+
+endif  # LED_SUBSYSTEM
+
+# Always include board-specific config if needed
+source "Kconfig.zephyr"
