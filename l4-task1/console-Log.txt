@@ -1,0 +1,53 @@
+*** Booting Zephyr OS build v4.2.0 ***
+[00:00:00.003,000] [0m<dbg> os: k_sched_unlock: scheduler unlocked (0x200000e0:0)[0m
+[00:00:00.011,000] [0m<inf> main: RGB LED Application started[0m
+[00:00:00.017,000] [0m<inf> main: Heartbeat period: 500 ms[0m
+[00:00:00.022,000] [0m<inf> main: RGB LED debugging enabled[0m
+[00:00:00.028,000] [0m<inf> main: Color: RED[0m
+[00:00:00.032,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:00.540,000] [0m<inf> main: Color: GREEN[0m
+[00:00:00.544,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:01.052,000] [0m<inf> main: Color: BLUE[0m
+[00:00:01.056,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:01.564,000] [0m<inf> main: Color: YELLOW[0m
+[00:00:01.568,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:02.076,000] [0m<inf> main: Color: CYAN[0m
+[00:00:02.080,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:02.588,000] [0m<inf> main: Color: MAGENTA[0m
+[00:00:02.593,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:03.100,000] [0m<inf> main: Color: WHITE[0m
+[00:00:03.105,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:03.612,000] [0m<inf> main: Color: OFF[0m
+[00:00:03.616,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:04.124,000] [0m<inf> main: Color: RED[0m
+[00:00:04.128,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:04.636,000] [0m<inf> main: Color: GREEN[0m
+[00:00:04.640,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:05.148,000] [0m<inf> main: Color: BLUE[0m
+[00:00:05.152,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:05.660,000] [0m<inf> main: Color: YELLOW[0m
+[00:00:05.664,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:06.172,000] [0m<inf> main: Color: CYAN[0m
+[00:00:06.176,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:06.684,000] [0m<inf> main: Color: MAGENTA[0m
+[00:00:06.688,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:07.196,000] [0m<inf> main: Color: WHITE[0m
+[00:00:07.200,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:07.708,000] [0m<inf> main: Color: OFF[0m
+[00:00:07.712,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:08.220,000] [0m<inf> main: Color: RED[0m
+[00:00:08.224,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:08.732,000] [0m<inf> main: Color: GREEN[0m
+[00:00:08.736,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:09.244,000] [0m<inf> main: Color: BLUE[0m
+[00:00:09.248,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:09.755,000] [0m<inf> main: Color: YELLOW[0m
+[00:00:09.760,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:10.268,000] [0m<inf> main: Color: CYAN[0m
+[00:00:10.272,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:10.779,000] [0m<inf> main: Color: MAGENTA[0m
+[00:00:10.784,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:11.292,000] [0m<inf> main: Color: WHITE[0m
+[00:00:11.296,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m
+[00:00:11.804,000] [0m<inf> main: Color: OFF[0m
+[00:00:11.808,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 5000 ticks[0m

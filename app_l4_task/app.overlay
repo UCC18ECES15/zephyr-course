@@ -1,0 +1,27 @@
+/ {
+    aliases {
+        /* Homework requirement: app-led alias */
+        app-led = &red_led;
+        
+        /* RGB LED aliases (adjust GPIO pins based on your board schematic) */
+        led-red = &red_led;
+        led-green = &green_led;
+        led-blue = &blue_led;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        red_led: led_0 {
+            gpios = <&gpio1 4 GPIO_ACTIVE_LOW>;
+            label = "Red LED";
+        };
+        green_led: led_1 {
+            gpios = <&gpio1 7 GPIO_ACTIVE_LOW>;
+            label = "Green LED";
+        };
+        blue_led: led_2 {
+            gpios = <&gpio1 6 GPIO_ACTIVE_LOW>;
+            label = "Blue LED";
+        };
+    };
+};
