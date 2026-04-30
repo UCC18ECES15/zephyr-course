@@ -1,0 +1,8 @@
+# Copyright (c) 2020 Henrik Brix Andersen <henrik@brixandersen.dk>
+# Copyright 2024 NXP
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_OUR_BOARD
+	select SOC_LPC55S16 if BOARD_OUR_BOARD
+	select SOC_PART_NUMBER_LPC55S16JBD100

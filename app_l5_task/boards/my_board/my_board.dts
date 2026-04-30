@@ -1,0 +1,100 @@
+
+
+
+/dts-v1/;
+
+#include <nxp/nxp_lpc55S16_ns.dtsi>
+#include "my_board-pinctrl.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+/ {
+	model = "Our Custom Board based on LPC55S16";
+	compatible = "nxp,lpc55xxx", "nxp,lpc";
+
+    chosen { 
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,code-partition = &slot0_partition;
+		zephyr,flash-controller = &iap;
+		zephyr,uart-mcumgr = &flexcomm0;
+		zephyr,console = &flexcomm0;
+		zephyr,shell-uart = &flexcomm0;
+	};
+
+    aliases{
+		led0 = &red_led;
+		led1 = &green_led;
+		led2 = &blue_led;
+		usart-0 = &flexcomm0;
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		red_led: led_0 {
+			gpios = <&gpio1 4 0>;
+			label = "Red LED";
+		};
+		green_led: led_1 {
+			gpios = <&gpio1 7 0>;
+			label = "Green LED";
+		};
+		blue_led: led_2 {
+			gpios = <&gpio1 6 0>;
+			label = "Blue LED";
+		};
+	};
+};
+
+&flexcomm0 {
+	status = "okay";
+	compatible = "nxp,lpc-usart";
+	current-speed = <115200>;
+	pinctrl-0 = <&pinmux_flexcomm0_usart>;
+	pinctrl-names = "default";
+};
+
+&flash0 {
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+		boot_partition: partition@0 {
+			label = "mcuboot";
+			reg = <0x0 DT_SIZE_K(32)>;
+		};
+		slot0_partition: partition@8000 {
+			label = "image-0";
+			reg = <0x00008000 DT_SIZE_K(96)>;
+		};
+		slot1_partition: partition@20000 {
+			label = "image-1";
+			reg = <0x00020000 DT_SIZE_K(96)>;
+		};
+		storage_partition: partition@38000 {
+			label = "storage";
+			reg = <0x00038000 DT_SIZE_K(20)>;
+		};
+
+	};
+};
+
+/*
+ * Default for this board is to allocate SRAM0-2 for data.  But the
+ * application can have an application specific device tree to
+ * allocate the SRAMs differently.
+ */
+&sram0 {
+	reg = <0x20000000 DT_SIZE_K(64)>;
+};
+
+&flexcomm0 {
+	status = "okay";
+};
+
+&gpio0 {
+	status = "okay";
+};
+
+&gpio1 {
+	status = "okay";
+};
