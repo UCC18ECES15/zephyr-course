@@ -1,0 +1,4 @@
+
+
+# Always include board-specific config if needed
+source "Kconfig.zephyr"
