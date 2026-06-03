@@ -1,0 +1,5 @@
+description: Our custom driver
+
+compatible: "zephyr,our-driver"
+
+include: base.yaml

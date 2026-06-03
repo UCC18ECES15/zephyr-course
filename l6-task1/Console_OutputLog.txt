@@ -1,0 +1,49 @@
+[00:00:00.000,000] [0m<inf> our_driver: Initializing ouizing ou[00:00:00.000,000] [0m<inf> our_driver: Initializing our_driver LED sensor[0m
+[00:00:00.007,000] [0m<inf> our_driver: LED sensor initialized (default blink rate: 1000 ms)[0m
+*** Booting Zephyr OS build v4.2.0 ***
+[00:00:00.019,000] [0m<dbg> os: k_sched_unlock: scheduler unlocked (0x200000e0:0)[0m
+[00:00:00.026,000] [0m<inf> main: === TASK 1: Standard Sensor API Test ===
+[0m
+[00:00:00.033,000] [0m<inf> main: LED sensor driver is ready
+[0m
+[00:00:00.039,000] [0m<inf> main: --- Test 1: Basic LED Control ---[0m
+[00:00:00.046,000] [0m<inf> main: Blink 1/5[0m
+[00:00:00.050,000] [0m<inf> our_driver: sample_fetch: LED ON (blink count: 1)[0m
+[00:00:00.057,000] [0m<inf> main:   sample_fetch returned: 0[0m
+[00:00:00.063,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 10000 ticks[0m
+[00:00:01.071,000] [0m<inf> our_driver: channel_get: LED OFF[0m
+[00:00:01.076,000] [0m<inf> main:   channel_get returned: 0, LED state: 0[0m
+[00:00:01.083,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 10000 ticks[0m
+[00:00:02.091,000] [0m<inf> main: Blink 2/5[0m
+[00:00:02.095,000] [0m<inf> our_driver: sample_fetch: LED ON (blink count: 2)[0m
+[00:00:02.102,000] [0m<inf> main:   sample_fetch returned: 0[0m
+[00:00:02.108,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 10000 ticks[0m
+[00:00:03.116,000] [0m<inf> our_driver: channel_get: LED OFF[0m
+[00:00:03.121,000] [0m<inf> main:   channel_get returned: 0, LED state: 0[0m
+[00:00:03.128,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 10000 ticks[0m
+[00:00:04.136,000] [0m<inf> main: Blink 3/5[0m
+[00:00:04.140,000] [0m<inf> our_driver: sample_fetch: LED ON (blink count: 3)[0m
+[00:00:04.147,000] [0m<inf> main:   sample_fetch returned: 0[0m
+[00:00:04.153,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 10000 ticks[0m
+[00:00:05.161,000] [0m<inf> our_driver: channel_get: LED OFF[0m
+[00:00:05.167,000] [0m<inf> main:   channel_get returned: 0, LED state: 0[0m
+[00:00:05.174,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 10000 ticks[0m
+[00:00:06.181,000] [0m<inf> main: Blink 4/5[0m
+[00:00:06.185,000] [0m<inf> our_driver: sample_fetch: LED ON (blink count: 4)[0m
+[00:00:06.193,000] [0m<inf> main:   sample_fetch returned: 0[0m
+[00:00:06.198,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 10000 ticks[0m
+[00:00:07.206,000] [0m<inf> our_driver: channel_get: LED OFF[0m
+[00:00:07.212,000] [0m<inf> main:   channel_get returned: 0, LED state: 0[0m
+[00:00:07.219,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 10000 ticks[0m
+[00:00:08.226,000] [0m<inf> main: Blink 5/5[0m
+[00:00:08.230,000] [0m<inf> our_driver: sample_fetch: LED ON (blink count: 5)[0m
+[00:00:08.238,000] [0m<inf> main:   sample_fetch returned: 0[0m
+[00:00:08.244,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 10000 ticks[0m
+[00:00:09.251,000] [0m<inf> our_driver: channel_get: LED OFF[0m
+[00:00:09.257,000] [0m<inf> main:   channel_get returned: 0, LED state: 0[0m
+[00:00:09.264,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 10000 ticks[0m
+[00:00:10.271,000] [0m<inf> main: 
+=== Task 1 Complete ===
+[0m
+[00:00:10.277,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 50000 ticks[0m
+[00:00:15.284,000] [0m<dbg> os: z_tick_sleep: thread 0x200000e0 for 50000 ticks[0m

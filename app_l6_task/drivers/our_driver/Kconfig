@@ -1,0 +1,5 @@
+config OUR_DRIVER
+    bool "Our Driver"
+    default y
+    help
+        Enable the custom driver for this application.
