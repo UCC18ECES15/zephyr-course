@@ -1,0 +1,30 @@
+/ {
+    our_driver0: our_driver {
+        compatible = "our_driver";
+        status = "okay";
+    };
+
+    aliases {
+        led0 = &red_led;
+        app-led = &red_led;
+    };
+};
+
+/* Ensure UART0 (flexcomm0) is enabled for shell */
+&flexcomm0 {
+    status = "okay";
+    current-speed = <115200>;
+};
+
+/* Ensure LEDs are available */
+&red_led {
+    status = "okay";
+};
+
+&green_led {
+    status = "okay";
+};
+
+&blue_led {
+    status = "okay";
+};

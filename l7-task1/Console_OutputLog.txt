@@ -1,0 +1,64 @@
+uart:~$
+[00:06:00.765,000] <inf> our_driver: Custom API: Total blink count is 11
+[00:06:00.774,000] <inf> our_driver: Custom API: Current blink rate is 500 ms
+[00:06:00.784,000] <inf> main: Status: Total blinks = 11, Rate = 500 ms
+uart:~$
+uart:~$
+[00:00:10.007,000] <inf> main: Main loop running... Use shell for interaction
+uart:~$ help
+Please press the <Tab> button to see all available commands.
+You can also use the <Tab> button to prompt or auto-complete all commands or its subcommands.
+You can try to call commands with <-h> or <--help> parameter for more information.
+
+Shell supports following meta-keys:
+  Ctrl + (a key from: abcdefklnpuw)
+  Alt  + (a key from: bf)
+Please refer to shell documentation for more details.
+
+Available commands:
+  clear       : Clear screen.
+  device      : Device commands
+  devmem      : Read/write physical memory
+                Usage:
+                Read memory at address with optional width:
+                devmem <address> [<width>]
+                Write memory at address with mandatory width and value:
+                devmem <address> <width> <value>
+  help        : Prints the help message.
+  history     : Command history.
+  kernel      : Kernel commands
+  our_driver  : Our driver commands
+  rem         : Ignore lines beginning with 'rem '
+  resize      : Console gets terminal screen size or assumes default in case the
+                readout fails. It must be executed after each terminal width
+                change to ensure correct text display.
+  retval      : Print return value of most recent command
+  sensor      : Sensor driver commands
+  shell       : Useful, not Unix-like shell commands.
+uart:~$ sensor help
+sensor - Sensor driver commands
+Subcommands:
+  fetch  : Call sensor_sample_fetch() - Turn LED ON
+  read   : Call sensor_channel_get() - Turn LED OFF and print result
+  info   : Print device name and ready state
+[00:00:20.017,000] <inf> main: Main loop running... Use shell for interaction
+uart:~$ sensor fetch
+[00:00:23.790,000] <inf> our_driver: sample_fetch: LED ON (blink count: 1)
+sensor_sample_fetch() called successfully
+LED turned ON
+uart:~$ sensor read
+[00:00:28.760,000] <inf> our_driver: channel_get: LED OFF
+sensor_channel_get() called successfully
+LED turned OFF
+LED state value: 0
+[00:00:30.027,000] <inf> main: Main loop running... Use shell for interaction
+uart:~$ sensor info
+=== Sensor Device Information ===
+Device name: our_driver
+Device ready: YES
+Status: Operational
+uart:~$
+uart:~$ [00:04:30.494,000] <inf> our_driver: Custom API: Total blink count is 11
+
+[00:00:40.037,000] <inf> main: Main loop running... Use shell for interaction
+uart:~$ [00:04:30.509,000] <inf> our_driver: Custom API: Current blink r

@@ -1,0 +1,11 @@
+# Application-specific Kconfig
+config APP_HEARTBEAT_PERIOD_MS
+    int "Application heartbeat period in milliseconds"
+    range 100 2000
+    default 500
+
+# Always include Zephyr's Kconfig
+source "Kconfig.zephyr"
+
+# Include driver Kconfig
+rsource "../drivers/our_driver/Kconfig"

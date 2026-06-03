@@ -1,0 +1,7 @@
+config OUR_DRIVER
+    bool "Our Custom LED Sensor Driver"
+    default n
+    depends on GPIO
+    depends on SENSOR
+    help
+        Enable the custom LED sensor driver.
